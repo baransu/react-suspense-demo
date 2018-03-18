@@ -1,6 +1,6 @@
 # react-suspence-demo
 
-> Suspence!!! 🙌
+> Suspense!!! 🙌
 
 ### Things to try out
 
