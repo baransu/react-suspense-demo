@@ -1,5 +1,7 @@
 # react-suspence-demo
 
+> Suspence!!! 🙌
+
 ### Things to try out
 
 * [ ] loading indicator on list
