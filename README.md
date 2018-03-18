@@ -1,4 +1,4 @@
-# react-suspence-demo
+# react-suspense-demo
 
 > Suspense!!! 🙌
 
