@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const Title = styled.h4`
-  margin: 10px auto;
-`;
-
 export const Item = styled.div`
   padding: 10px;
   border-bottom: 1px solid lightgray;
@@ -32,11 +28,22 @@ export const Main = styled.div`
   grid-row: 1;
 `;
 
-export const Sidebar = styled.div`
-  grid-column: 3 / 3;
-  grid-row: 1;
-`;
-
 export const Map = props => {
   return props.collection.map(props.children);
+};
+
+export const If = props => {
+  if (props.cond) {
+    return props.children;
+  } else {
+    return null;
+  }
+};
+
+export const IfElse = props => {
+  if (props.cond) {
+    return props.true;
+  } else {
+    return props.false;
+  }
 };

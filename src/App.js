@@ -1,20 +1,21 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router";
-import history from "./history";
-
-import First from "./First";
+import { IfElse } from "./components";
+import Search from "./Search";
 import Details from "./Details";
-import { StoreProvider } from "./Store";
+import { StoreProvider, StoreConsumer } from "./Store";
 
 const App = () => {
   return (
     <StoreProvider>
-      <Router history={history}>
-        <Switch>
-          <Route exact path="/" component={First} />
-          <Route path="/details" component={Details} />
-        </Switch>
-      </Router>
+      <StoreConsumer>
+        {({ state }) => (
+          <IfElse
+            cond={!!state.details}
+            true={<Details id={state.details} />}
+            false={<Search />}
+          />
+        )}
+      </StoreConsumer>
     </StoreProvider>
   );
 };
